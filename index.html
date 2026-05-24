@@ -36,10 +36,24 @@
     .feature h3{margin:0 0 8px;font-size:17px}
     .feature p{margin:0;color:var(--muted);font-size:14.5px}
     .feature .em{font-size:24px;margin-bottom:10px}
+    a.feature{color:var(--fg);display:block;transition:border-color .15s}
+    a.feature:hover{text-decoration:none;border-color:rgba(124,105,245,0.55)}
     section{margin:56px 0}
     h2{font-size:32px;letter-spacing:-0.01em;margin:0 0 20px}
     .langs{display:flex;flex-wrap:wrap;gap:6px;margin:20px 0}
     .lang{padding:4px 10px;border-radius:999px;background:var(--card);font-size:13px;color:var(--muted);border:1px solid rgba(255,255,255,0.06)}
+    /* Example before/after */
+    .example-row{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;margin:8px 0 4px}
+    .doc{display:flex;flex-direction:column;align-items:center;gap:8px}
+    .doc img{width:clamp(170px,38vw,250px);height:auto;border-radius:10px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.45);border:1px solid rgba(255,255,255,0.08)}
+    .doc figcaption{font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);font-weight:600}
+    .arrow{font-size:30px;color:var(--accent2);line-height:1}
+    .center{text-align:center}
+    .note{color:var(--muted);font-size:13px;margin-top:6px}
+    .btn-ghost{display:inline-block;padding:11px 22px;border-radius:12px;font-weight:600;
+      background:var(--card);border:1px solid rgba(255,255,255,0.14);color:var(--fg);font-size:15px;margin-top:12px}
+    .btn-ghost:hover{text-decoration:none;border-color:var(--accent)}
     footer{border-top:1px solid rgba(255,255,255,0.06);padding:32px 24px;text-align:center;color:var(--muted);font-size:13px;margin-top:64px}
     footer a{margin:0 12px}
     @media (max-width:640px){h1{font-size:38px}.tagline{font-size:17px}h2{font-size:26px}}
@@ -65,6 +79,25 @@
       <div class="feature"><div class="em">🌐</div><h3>36 languages</h3><p>1,056 translation directions. Auto-detects the source language.</p></div>
       <div class="feature"><div class="em">🛡️</div><h3>Sandboxed</h3><p>Mac App Store sandbox; only reads files you choose.</p></div>
     </div>
+
+    <section>
+      <h2>See it in action</h2>
+      <div class="example-row">
+        <figure class="doc">
+          <img src="sample-doc-en.png" alt="Sample document in English">
+          <figcaption>English</figcaption>
+        </figure>
+        <div class="arrow" aria-hidden="true">→</div>
+        <figure class="doc">
+          <img src="sample-doc-es.png" alt="Same document translated to Spanish">
+          <figcaption>Español</figcaption>
+        </figure>
+      </div>
+      <div class="center">
+        <a class="btn-ghost" href="sample.docx" download>↓ Download the example (.docx)</a>
+        <div class="note">Open it in Bobr Translate and translate it into any of 36 languages.</div>
+      </div>
+    </section>
 
     <section>
       <h2>Supported languages</h2>
@@ -95,10 +128,20 @@
         <li>A translated copy appears next to the original: <code>Report.ru.docx</code>.</li>
       </ol>
     </section>
+
+    <section>
+      <h2>Terms &amp; policies</h2>
+      <div class="grid">
+        <a class="feature" href="privacy.html"><div class="em">🔒</div><h3>Privacy Policy</h3><p>Exactly what the app does and doesn't do with your data — nothing leaves your Mac.</p></a>
+        <a class="feature" href="terms.html"><div class="em">📄</div><h3>Terms of Use</h3><p>The licence terms that apply when you use Bobr Translate.</p></a>
+        <a class="feature" href="support.html"><div class="em">💬</div><h3>Support &amp; FAQ</h3><p>Common questions and how to reach us.</p></a>
+      </div>
+    </section>
   </main>
 
   <footer>
     <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
     <a href="support.html">Support</a>
     <a href="https://github.com/dkleptsov/bobr-translate-docs">GitHub</a>
     <div style="margin-top:14px">© 2026 Bobr Translate</div>
